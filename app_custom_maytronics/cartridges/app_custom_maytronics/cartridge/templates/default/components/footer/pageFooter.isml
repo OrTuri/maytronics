@@ -1,0 +1,62 @@
+<style>
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    input,
+    input:focus,
+    input:active {
+        border-color: rgba(0, 0, 0, 1) !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+</style>
+<footer class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-3 mb-sm-5">
+            <h3>Join Our Newsletter</h3>
+            <p class="fs-6">Yes, I'd like to receive promotions and updates to my email</p>
+            <div class="form-group required">
+                <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+            </div>
+            <div class="form-group required">
+                <input type="text" class="form-control" id="floatingPassword" placeholder="Last Name">
+            </div>
+            <div class="form-group required">
+                <input type="email" class="form-control" id="floatingPassword" placeholder="Email">
+            </div>
+            <button type="submit" class="btn btn-dark btn-block newsletter-footer-btn rounded-pill">Submit</button>
+        </div>
+        <div class="col-12 col-lg-8">
+            <div class="row justify-content-center d-flex">
+                <div class="col-10 col-md-3 my-3 my-lg-0">
+                    <h4>${Resource.msg("products.heading", "footer", null)}</h4>
+                    <iscontentasset aid="footer-products" />
+                </div>
+                <div class="col-10 col-md-3 my-3 my-lg-0">
+                    <h4>${Resource.msg("corporate.heading", "footer", null)}</h4>
+                    <iscontentasset aid="footer-corporate" />
+                </div>
+                <div class="col-10 col-md-3 my-3 my-lg-0">
+                    <h4>${Resource.msg("support.heading", "footer", null)}</h4>
+                    <iscontentasset aid="footer-support" />
+                </div>
+                <div class="col-10 my-auto col-md-3">
+                    <div class="mb-3">
+                        <p class="fw-bold m-0">1-888-365-7446</p>
+                        <p class="lead m-0">US toll free</p>
+                    </div>
+                    <div class="mb-4">
+                        <p class="fw-bold m-0">1-855-634-8572</p>
+                        <p class="lead m-0">Canada toll free</p>
+                    </div>
+                    <div>
+                        <h4>Partners & Dealers</h4>
+                        <iscontentasset aid="footer-partners" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
