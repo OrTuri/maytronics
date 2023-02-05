@@ -1,0 +1,69 @@
+
+
+<header>
+    <isinclude template="/components/header/skipNav" />
+    <iscomment> <div class="header-banner slide-up d-none">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div></div>
+                <div class="content">
+                    <isslot id="header-banner-m" description="Slot above the site header" context="global" />
+                </div>
+                <div class="close-button">
+                    <button type="button" class="close" aria-label="${Resource.msg('label.header.banner.close', 'common', null)}">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> </iscomment>
+
+    <nav role="navigation" class="">
+        
+        <div class="header container">
+
+            <div class="row  py-3 bg-dark ">
+                <div class="col-9 col-sm-6 text-white global-container" id="global-container">
+                        <p  class="global" id="global">Global</p>
+                         <div class="locals" id="locals">
+                            <a>USA English</a>
+                            <a>Israel </a>
+                        </div>
+                </div>
+                
+                <div class="col-3 col-sm-6 d-flex justify-content-end gap-3 text-white">
+                    <p>Corporate</p>
+                    <p>Partners</p>
+                    <p class="bg-warning">Find a Store</p>
+                </div>
+
+            </div>
+
+
+            <div class="row d-flex align-items-center ">
+                <div class="col-2">
+                <a href="${URLUtils.url('Home-Show')}">
+                    <isslot id="main-logo" context="global" description="logo"   />
+                </a>
+                </div>
+
+                <div class="col-8 text-dark">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                </div>
+
+                <div class="col-2 d-flex">
+                     <isinclude template="components/header/search" />
+                      <isinclude url="${URLUtils.url('Account-Header')}" />
+                      <isinclude url="${URLUtils.url('Page-Locale')}" />
+                </div>
+
+            </div>
+
+           
+        </div>
+
+    </nav>
+
+
+
+</header>
