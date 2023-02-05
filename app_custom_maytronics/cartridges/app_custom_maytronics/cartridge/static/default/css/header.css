@@ -1,0 +1,30 @@
+.global-container{
+    height: fit-content;
+    transition: all ease-in-out 1s;
+    position:relative;
+    z-index: 4;
+
+}
+.global{
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 2;
+    
+}
+
+
+.locals{
+    transition: all ease-in-out 1s;
+    color: white;
+    position: relative;
+    z-index: 1;
+    height: 0;
+
+}
+
+.locals p{
+    opacity: 0;
+    transition: all ease-in-out 1s;
+}
+
