@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html dir="${request.getLocale() === "he_IL" ? "rtl" : "ltr"}"
     lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}">
-
 <head>
     <!--[if gt IE 9]><!-->
     <isinclude sf-toolkit="off" template="/common/scripts" />
