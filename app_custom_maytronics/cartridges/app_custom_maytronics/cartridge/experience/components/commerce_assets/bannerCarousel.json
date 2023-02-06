@@ -1,0 +1,83 @@
+{
+  "name": "Banner Carousel",
+  "description": "This is a banner carousel",
+  "group": "commerce_assets",
+  "attribute_definition_groups": [
+    {
+      "id": "bannerImage1",
+      "name": "Banner Image number 1",
+      "description": "Please select the first banner image",
+      "attribute_definitions": [
+        {
+          "id": "image1",
+          "name": "Banner Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "title1",
+          "name": "Title banner 1",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "description1",
+          "name": "description banner 1",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "bannerImage2",
+      "name": "Banner Image number 2",
+      "description": "Please select the second banner image",
+      "attribute_definitions": [
+        {
+          "id": "image2",
+          "name": "Banner Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "title2",
+          "name": "Title banner 2",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "description2",
+          "name": "description banner 2",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "bannerImage3",
+      "name": "Banner Image number 3",
+      "description": "Please select the third banner image",
+      "attribute_definitions": [
+        {
+          "id": "image3",
+          "name": "Banner Image",
+          "type": "image",
+          "required": true
+        },
+        {
+          "id": "title3",
+          "name": "Title banner 3",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "description3",
+          "name": "description banner 3",
+          "type": "text",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "region_definitions": []
+}
