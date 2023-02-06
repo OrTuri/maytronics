@@ -13,9 +13,6 @@
 
 }
 
-.my-row{
-    position: relative;
-}
 
 .global{
     cursor: pointer;
@@ -26,12 +23,21 @@
 
 .global-links{
     z-index: 9;
+    height: 50px;
+}
+
+.global-links div{
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
 }
 
 .popup{
     background-color: black;
     color: white;
-    min-height: 200px;
+    min-height: 150px;
     width: 100%;
     transition: all ease-in-out 0.5s;
     border-bottom-left-radius: 10PX;
@@ -45,6 +51,11 @@
     top: 50px;
 }
 
+.popup div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .popup a{
     opacity: 0;
     transition: all ease-in-out 0.5s;
@@ -53,6 +64,7 @@
 }
 .locals{
     transform: translateY(-150%);
+    float: left;
 }
 
 .coporate{
