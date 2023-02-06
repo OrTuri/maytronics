@@ -1,0 +1,26 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/experience/components/commerceAssets/contentBanner.css');
+</isscript>
+
+<div class="container content-banner-container" dir="${request.getLocale() === "he_IL" ? "rtl" : "ltr"}">
+    <div class="row d-flex justify-content-between" style="border-radius: 50px">     
+        <div class="col-12 col-lg-6 content-banner-text">
+            <div class="content-banner-text-header" >
+                <isprint value="${pdict.textHeadline}" encoding="off" />
+            </div>
+            <div class="content-banner-text-description">
+                <isprint value="${pdict.textDescription}" encoding="off" />
+            </div>
+            <div class="content-banner-text-button">
+                <button class="btn btn-primary">
+                <isprint value="${pdict.button}" encoding="on" />    
+                </button>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 content-banner-image-container" >
+            <img src="${pdict.image.url}" alt="${pdict.image.url}">
+        </div>
+    </div>
+</div>
