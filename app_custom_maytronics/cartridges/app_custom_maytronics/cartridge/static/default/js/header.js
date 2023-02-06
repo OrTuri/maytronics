@@ -1,22 +1,22 @@
-$('#global-container').on('mouseenter',()=>{
+$('#open-global').on('mouseenter',()=>{
     
-    // $('#locals').css('display',"inline-block");
-    $('#locals').css('height','100px');
+    $('.locals').css('transform','translateY(-5%)');
+    
     
     setTimeout(()=>{
-        $('#locals p').css('opacity',1);
-    },1000)
+        $('.locals a').css('opacity',1);
+    },600)
     
 })
 
 
 
-$('#global-container').on('mouseleave',()=>{
+$('.global-container').on('mouseleave',()=>{
+    $('.locals a').css('opacity',0);
     setTimeout(()=>{
-        $('#locals p').css('opacity',0);
-    },300)
+        $('.locals').css('transform','translateY(-200%)');
+    },600)
 
-    $('#locals').css('height',0);
 
 
 })
