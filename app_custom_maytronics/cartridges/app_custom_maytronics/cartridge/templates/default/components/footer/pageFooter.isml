@@ -14,9 +14,16 @@
 </style>
 <footer class="container-fluid">
     <div class="row justify-content-center">
+        <div class="m-auto mb-4">
+            <iscontentasset aid="footer-logo" />
+        </div>
         <div class="col-12 col-lg-3 mb-sm-5">
             <h3>Join Our Newsletter</h3>
-            <p class="fs-6">Yes, I'd like to receive promotions and updates to my email</p>
+            <div class="ms-3">
+                <input id="promotion" class="form-check-input mt-1" type="checkbox" value=""
+                    aria-label="Checkbox for following text input">
+                <label for="promotion" class="fs-6">Yes, I'd like to receive promotions and updates to my email</label>
+            </div>
             <div class="form-group required">
                 <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
             </div>

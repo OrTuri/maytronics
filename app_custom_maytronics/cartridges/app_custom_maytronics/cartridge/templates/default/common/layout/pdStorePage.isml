@@ -1,20 +1,32 @@
-<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<iscontent type="text/html" charset="UTF-8" compact="true" />
 
 <isinclude template="/components/modules" sf-toolkit="off" />
 
-<!-- Include Page Designer Campaign Banner JavaScript and Styles only once here rather than at component level. -->
-<!-- There should only be one Campagin Banner added on a PD page. Multiple Banners is unsupported at the moment. -->
+<!DOCTYPE html>
+<html dir="${request.getLocale() === " he_IL" ? "rtl" : "ltr"}"
+    lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}">
 
-<isif condition="${pdict.resetEditPDMode}">
-    <script> var resetCampaignBannerSessionToken = true; </script>
-</isif>
+<head>
+    <!--[if gt IE 9]><!-->
+    <isinclude sf-toolkit="off" template="/common/scripts" />
+    <!--<![endif]-->
+    <isinclude template="/common/htmlHead" />
+    <isif condition="${pdict.canonicalUrl}">
+        <link rel="canonical" href="${pdict.canonicalUrl}" />
+    </isif>
+    <isactivedatahead/>
+    <isinclude template="/components/schema" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer type="text/javascript" src="${URLUtils.staticURL('/js/header.js')}"></script>
+</head>
+<body>
+    ${dw.system.HookMgr.callHook('app.template.beforeHeader', 'beforeHeader', pdict) || ''}
 
-<isscript>
-    var assets = require('*/cartridge/scripts/assets.js');
-    assets.addCss('/css/experience/components/commerceAssets/campaignBanner.css');
-    assets.addJs('/js/campaignBanner.js');
-</isscript>
-
+    <div class="page" data-action="${pdict.action}" data-querystring="${pdict.queryString}">
+        <isinclude template="/components/header/pageHeader" />
+        <div role="main" id="maincontent">
+            <isreplace/>
 <!DOCTYPE html>
 <html lang="${require('dw/util/Locale').getLocale(request.getLocale()).getLanguage()}">
     <head>
@@ -40,19 +52,26 @@
             </div>
             <isinclude template="/components/footer/pageFooter" />
         </div>
-        <div class="error-messaging"></div>
-        <div class="modal-background"></div>
-        <iscontentasset aid="cookie_hint" />
-         <!--[if lt IE 10]>
+        <isinclude template="/components/footer/pageFooter" />
+    </div>
+    <div class="error-messaging"></div>
+    <div class="modal-background"></div>
+    <iscontentasset aid="cookie_hint" />
+    <!--[if lt IE 10]>
             <isinclude sf-toolkit="off" template="/common/scripts" />
         <![endif]-->
-        <iscomment>
-            hook for Marketing Cloud connector & other integration which need to inject
-            logic at the page end
-            IMPORTANT: Note that this hook will be called to cached as well as uncached pages
-                        which means you need to put privacy information into another remote include
-        </iscomment>
-        ${dw.system.HookMgr.callHook('app.template.afterFooter', 'afterFooter', pdict) || ''}
-        <isinclude url="${URLUtils.url('ConsentTracking-Check')}"/>
-    </body>
+    <iscomment>
+        hook for Marketing Cloud connector & other integration which need to inject
+        logic at the page end
+        IMPORTANT: Note that this hook will be called to cached as well as uncached pages
+        which means you need to put privacy information into another remote include
+    </iscomment>
+    ${dw.system.HookMgr.callHook('app.template.afterFooter', 'afterFooter', pdict) || ''}
+    <isinclude url="${URLUtils.url('ConsentTracking-Check')}" />
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
 </html>
