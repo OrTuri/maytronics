@@ -1,4 +1,4 @@
-.nav-container{
+.header-container{
     width: 100%;
 }
 
@@ -6,11 +6,17 @@
 /* global section */
 .global-container{
   background-color: black;
-   height: 5vh;
+   height: 50px;
    padding: auto;
+   
 
 
 }
+
+.my-row{
+    position: relative;
+}
+
 .global{
     cursor: pointer;
     color: white;
@@ -22,30 +28,41 @@
     z-index: 9;
 }
 
-
-.locals{
+.popup{
     background-color: black;
     color: white;
-    min-height: 10vh;
+    min-height: 200px;
     width: 100%;
     transition: all ease-in-out 0.5s;
     border-bottom-left-radius: 10PX;
     border-bottom-right-radius: 10PX;
     margin: 0;
-    transform: translateY(-200%);
     z-index: 6;
     display: flex;
     flex-direction: column;
-     padding: 5px 10px;
-   
-
+    padding: 5px 10px;
+    position: absolute;
+    top: 50px;
 }
 
-.locals a{
+.popup a{
     opacity: 0;
     transition: all ease-in-out 0.5s;
     padding:10px 20px;
+    color: white;
 }
+.locals{
+    transform: translateY(-150%);
+}
+
+.coporate{
+    transform: translateY(-150%);
+}
+.partners{
+    transform: translateY(-150%);
+}
+
+
 
 #open-global{
 z-index: 9;

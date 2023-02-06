@@ -22,7 +22,7 @@
             "description": "Select the image to be displayed in the background. Select to apply shade over the image by 40% black and changing text color to white.",
             "attribute_definitions": [
                 {
-                    "id": "image",
+                    "id": " ",
                     "name": "Image",
                     "description": "Select an image to be displayed on the background",
                     "type": "image",

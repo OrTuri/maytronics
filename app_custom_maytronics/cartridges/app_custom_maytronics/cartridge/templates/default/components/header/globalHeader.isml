@@ -1,0 +1,37 @@
+<div class="global-container">
+            <div class="container">
+                
+                <div class="row pt-2 my-row">
+                    
+                    <div class="col-9 col-sm-6 text-white global">
+                            <p  class="global" id="open-global" ><span><i class="fa-solid fa-earth-africa"></i></span> Global</p>
+                    </div>
+                    
+                    <div class="col-3 col-sm-6 d-flex justify-content-end gap-3 text-white global-links align-items-center" >
+                        <p id="corporate-open">Corporate</p>
+                        <p id="partners-open"><span><i class="fa-solid fa-suitcase"></i></span> Partners</p>
+                        <p class="bg-warning py-1 px-2" style="border-radius:10px"><span><i class="fa-solid fa-location-dot"></i></span> Find a Store</p>
+                    </div>
+
+                    <div class="popup locals">
+                        <a>USA English</a>
+                        <a>Israel </a>
+                    </div>
+
+                    <div class="popup coporate">
+                        <a href="dqwd">About Us</a>    
+                        <a href="dqwd" >Blog</a>
+                        <a href="wqdq" >Sustainability</a>
+                        <a href="dqwd" >Investors</a>
+                        <a href="dqwd" >Management</a>
+                        <a href="dqw" >Directors</a>
+                        <a href="dqw" >Maytronics History</a>        
+                    </div>
+                    <div class="popup partners">
+                        <a href="dqwd"> Partner Portal</a>    
+                        <a href="dqwd" >Dealers and Distributors</a>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
