@@ -1,0 +1,24 @@
+
+        <div class="navbar-container">
+            <div class="container py-2">
+                <div class="row d-flex py-auto ">
+                    <div class="col-2">
+                        <a href="${URLUtils.url('Home-Show')}" class="mt-2">
+                            <isslot id="main-logo" context="global" description="logo"   />
+                        </a>
+                    </div>
+
+                    <div class="col-7 text-dark">
+                        <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                    </div>
+
+                    <div class="col-3 d-flex">
+                        <isinclude template="components/header/search" />
+                        <isinclude url="${URLUtils.url('Account-Header')}" />
+                        <isinclude url="${URLUtils.url('Page-Locale')}" />
+                    </div>
+
+                </div>
+            </div>
+           
+        </div>
